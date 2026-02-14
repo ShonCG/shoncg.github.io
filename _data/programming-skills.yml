@@ -9,3 +9,7 @@
 - name: Python
   percentage: 70
   color: secondary
+
+- name: Clowning
+  percentage: 100
+  color: Green
