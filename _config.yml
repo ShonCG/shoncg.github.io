@@ -1,9 +1,9 @@
 ### Site Settings ###
 title               : ShonCG
 description         : >-
-                      I turn coffee :coffee: into code,
-                      use tabs over spaces
-                      and never broke production.
+                      Test bio
+                      just testing!
+                      this is a test as well :)
 baseurl             : ""            # Change to empty quotes if you are hosting your site at <your-username>.github.io directly
 repository          : shoncg.github.io      # Change to <your-username>/<your-username>.github.io (or remove it if you don't need remote projects)
 remote_theme        : yousinix/portfolYOU
@@ -30,12 +30,12 @@ author:
 # behance           : your_username
 # dribbble          : your_username
   email             : acionini@gmail.com
-#  facebook          : your_username
+# facebook          : your_username
   github            : ShonCG
 # gitlab            : your_username
 # instagram         : your_username
 # kaggle            : your_username
-  linkedin          : Alessandro Cionini
+  linkedin          : https://www.linkedin.com/in/alessandro-cionini-405222181/
 # medium            : your_username
 # soundcloud        : your_username
 # spotify           : your_username
