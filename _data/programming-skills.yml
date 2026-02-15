@@ -1,15 +1,15 @@
-- name: HTML5/CSS3
+- name: Unreal Engine
   percentage: 90
   color: danger
 
-- name: Go
+- name: Unity
   percentage: 80
-  color:
+  color: primary
 
-- name: Python
+- name: Maya
   percentage: 70
   color: secondary
 
-- name: Clowning
+- name: Blender
   percentage: 100
-  color: Green
+  color:

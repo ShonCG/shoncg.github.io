@@ -1,7 +1,11 @@
-- name: Adobe Photoshop
-  percentage: 95
+- name: Substance Painter
+  percentage: 70
   color: info
 
-- name: Adobe Illustrator
-  percentage: 90
+- name: Photoshop
+  percentage: 100
   color: success
+
+- name: ZBrush
+  percentage: 100
+  color: dark
