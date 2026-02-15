@@ -29,7 +29,7 @@
   <a href="{{ post_url }}" class="post card {{ card_style }}" {%- if post.external_url and site.open_new_tab -%} target="_blank" {%- endif -%}>
 
     {% if page.image %}
-      <img class="post-featured" src="{{ page.image | relative_url }}" alt="{{ page.title }}">
+      <img class="post-featured" src="{{ post.image | relative_url }}" alt="{{ post.title }}">
     {% endif %}
 
     <div class="card-body {{ text_style }}">
