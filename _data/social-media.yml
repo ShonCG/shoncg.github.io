@@ -34,7 +34,7 @@ gitlab:
 instagram:
   url   : https://www.instagram.com/
   icon  : fab fa-instagram
-  color : 405de6
+  color : d22f7e
   
 kaggle:
   url   : https://www.kaggle.com/
