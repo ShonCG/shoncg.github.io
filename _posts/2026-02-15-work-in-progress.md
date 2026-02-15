@@ -1,7 +1,7 @@
 ---
 title: Work In progress
 tags: [WIP]
-style: fill
+style: border
 color: primary
 description: This is a test post
 external_url: 
