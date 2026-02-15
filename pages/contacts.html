@@ -5,36 +5,50 @@ weight: 4
 permalink: /contacts/
 ---
 
-<div style="min-height:5vh; display:grid; place-items:center; text-align:left;">
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<div style="
+  min-height: 100vh;          /* full screen vertical height */
+  display: grid;
+  place-items: center;         /* vertical + horizontal center */
+  text-align: left;            /* text aligned left inside the column */
+  gap: 1rem;                   /* spacing between rows */
+">
+
   <h1>Contact me</h1>
   
   <p>:envelope: acionini@gmail.com</p>
-  
 
+  <!-- LinkedIn -->
   <a href="https://www.linkedin.com/in/alessandro-cionini-405222181/" 
-    target="_blank"
-    style="
-      color: inherit;
-      font-size: 1rem;
-      text-decoration: none;
-      border: none;
-      outline: none;
-    ">
+     target="_blank"
+     style="
+       color: inherit;
+       font-size: 1rem;
+       text-decoration: none;
+       display: inline-flex;      /* icon + text on same line */
+       align-items: center;       /* vertical alignment */
+       gap: 0.4rem;               /* spacing between icon and text */
+     ">
     <i class="fa-brands fa-linkedin"></i>
-    <p> Linkedin</p>
+    <span>LinkedIn</span>
   </a>
-  
+
+  <!-- Artstation -->
   <a href="https://www.artstation.com/shoncg"     
-    target="_blank"
-    style="
-      color: inherit;
-      font-size: 1rem;
-      text-decoration: none;
-      border: none;
-      outline: none;
-    ">
+     target="_blank"
+     style="
+       color: inherit;
+       font-size: 1rem;
+       text-decoration: none;
+       display: inline-flex;
+       align-items: center;
+       gap: 0.4rem;
+     ">
     <i class="fa-brands fa-artstation"></i>
-    <p> Artstation</p>
+    <span>Artstation</span>
   </a>
 
 </div>
