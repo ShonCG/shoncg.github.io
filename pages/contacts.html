@@ -5,57 +5,82 @@ weight: 4
 permalink: /contacts/
 ---
 
+<!-- Font Awesome (once in <head>) -->
 <link
   rel="stylesheet"
   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 <div style="
-  min-height: 5vh;          /* full screen vertical height */
+  min-height: 100vh;
   display: grid;
-  place-items: center;         /* vertical + horizontal center */
-  text-align: left;            /* text aligned left inside the column */
-  gap: 1rem;                   /* spacing between rows */
+  place-items: center;
+  gap: 1rem;
+  text-align: center;
 ">
 
   <h1>Contact me</h1>
-  
-  <!-- Mail -->
-  <p style="
-       font-size: 1.5rem;
+
+  <!-- Email button -->
+  <a href="mailto:acionini@gmail.com"
+     style="
        display: inline-flex;
        align-items: center;
-       gap: 0.4rem;
-    ">
+       gap: 0.5rem;
+       padding: 0.6rem 1.2rem;
+       font-size: 1.2rem;
+       text-decoration: none;
+       color: inherit;
+       background-color: #f0f0f0;
+       border-radius: 0.5rem;
+       transition: background-color 0.2s;
+     "
+     onmouseover="this.style.backgroundColor='#e0e0e0'"
+     onmouseout="this.style.backgroundColor='#f0f0f0'"
+  >
     <i class="fa-solid fa-envelope"></i>
-    acionini@gmail.com
-  </p>
+    <span>acionini@gmail.com</span>
+  </a>
 
-  <!-- LinkedIn -->
-  <a href="https://www.linkedin.com/in/alessandro-cionini-405222181/" 
+  <!-- LinkedIn button -->
+  <a href="https://www.linkedin.com/in/alessandro-cionini-405222181/"
      target="_blank"
      style="
-       color: inherit;
-       font-size: 1.5rem;
+       display: inline-flex;
+       align-items: center;
+       gap: 0.5rem;
+       padding: 0.6rem 1.2rem;
+       font-size: 1.2rem;
        text-decoration: none;
-       display: inline-flex;      /* icon + text on same line */
-       align-items: center;       /* vertical alignment */
-       gap: 0.4rem;               /* spacing between icon and text */
-     ">
+       color: inherit;
+       background-color: #f0f0f0;
+       border-radius: 0.5rem;
+       transition: background-color 0.2s;
+     "
+     onmouseover="this.style.backgroundColor='#e0e0e0'"
+     onmouseout="this.style.backgroundColor='#f0f0f0'"
+  >
     <i class="fa-brands fa-linkedin"></i>
     <span>LinkedIn</span>
   </a>
 
-  <!-- Artstation -->
-  <a href="https://www.artstation.com/shoncg"     
+  <!-- Artstation button -->
+  <a href="https://www.artstation.com/shoncg"
      target="_blank"
      style="
-       color: inherit;
-       font-size: 1.5rem;
-       text-decoration: none;
        display: inline-flex;
        align-items: center;
-       gap: 0.4rem;
-     ">
+       gap: 0.5rem;
+       padding: 0.6rem 1.2rem;
+       font-size: 1.2rem;
+       text-decoration: none;
+       color: inherit;
+       background-color: #f0f0f0;
+       border-radius: 0.5rem;
+       transition: background-color 0.2s;
+     "
+     onmouseover="this.style.backgroundColor='#e0e0e0'"
+     onmouseout="this.style.backgroundColor='#f0f0f0'"
+  >
     <i class="fa-brands fa-artstation"></i>
     <span>Artstation</span>
   </a>
