@@ -5,6 +5,8 @@ weight: 4
 permalink: /contacts/
 ---
 
+<body onload="document.querySelectorAll('.fade-in').forEach(e => e.style.opacity = 1)">
+
 <!-- Font Awesome (once in <head>) -->
 <link
   rel="stylesheet"
@@ -28,66 +30,90 @@ permalink: /contacts/
   </h1>
 
   <!-- Email button -->
-  <a href="mailto:acionini@gmail.com"
+  <div class="fade-in"
     style="
-     display: inline-flex;
-     align-items: center;
-     gap: 0.5rem;
-     padding: 0.6rem 1rem;
-     font-size: 1.2rem;
-     text-decoration: none;
-     color: inherit;
-     border: 1px solid currentColor;
-     border-radius: 0.5rem;
-     width: 265px;
-     justify-content: left;
-     transition: transform 0.15s ease, color 0.2s ease, border-color 0.2s ease;
-    "
-    onmouseover="
-     this.style.color = 'var(--primary)';
-     this.style.borderColor = 'var(--primary)';
-     this.style.transform = 'translateY(-2px)';
-    "
-    onmouseout="
-     this.style.color = 'inherit';
-     this.style.borderColor = 'currentColor';
-     this.style.transform = 'translateY(0)';
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+    opacity: 0;
+    transition: opacity 1s ease;
+    transition-delay: 0.5s;
     ">
 
-    <i class="fa-solid fa-envelope"></i>
-    <span>acionini@gmail.com</span>
-  </a>
+    <a href="mailto:acionini@gmail.com"
+      style="
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.6rem 1rem;
+      font-size: 1.2rem;
+      text-decoration: none;
+      color: inherit;
+      border: 1px solid currentColor;
+      border-radius: 0.5rem;
+      width: 265px;
+      justify-content: left;
+      transition: transform 0.15s ease, color 0.2s ease, border-color 0.2s ease;
+      "
+      onmouseover="
+      this.style.color = 'var(--primary)';
+      this.style.borderColor = 'var(--primary)';
+      this.style.transform = 'translateY(-2px)';
+      "
+      onmouseout="
+      this.style.color = 'inherit';
+      this.style.borderColor = 'currentColor';
+      this.style.transform = 'translateY(0)';
+      ">
+
+      <i class="fa-solid fa-envelope"></i>
+      <span>acionini@gmail.com</span>
+    </a>
+  </div>
 
   <!-- LinkedIn button -->
-  <a href="https://www.linkedin.com/in/alessandro-cionini-405222181/"
-     style="
-     display: inline-flex;
-     align-items: center;
-     gap: 0.5rem;
-     padding: 0.6rem 1rem;
-     font-size: 1.2rem;
-     text-decoration: none;
-     color: inherit;
-     border: 1px solid currentColor;
-     border-radius: 0.5rem;
-     width: 265px;
-     justify-content: left;
-     transition: transform 0.15s ease, color 0.2s ease, border-color 0.2s ease;
-    "
-    onmouseover="
-     this.style.color = 'var(--primary)';
-     this.style.borderColor = 'var(--primary)';
-     this.style.transform = 'translateY(-2px)';
-    "
-    onmouseout="
-     this.style.color = 'inherit';
-     this.style.borderColor = 'currentColor';
-     this.style.transform = 'translateY(0)';
+  <div class="fade-in"
+    style="
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+    opacity: 0;
+    transition: opacity 1s ease;
+    transition-delay: 1s;
     ">
+
+    <a href="https://www.linkedin.com/in/alessandro-cionini-405222181/"
+      style="
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.6rem 1rem;
+      font-size: 1.2rem;
+      text-decoration: none;
+      color: inherit;
+      border: 1px solid currentColor;
+      border-radius: 0.5rem;
+      width: 265px;
+      justify-content: left;
+      transition: transform 0.15s ease, color 0.2s ease, border-color 0.2s ease;
+      "
+      onmouseover="
+      this.style.color = 'var(--primary)';
+      this.style.borderColor = 'var(--primary)';
+      this.style.transform = 'translateY(-2px)';
+      "
+      onmouseout="
+      this.style.color = 'inherit';
+      this.style.borderColor = 'currentColor';
+      this.style.transform = 'translateY(0)';
+      ">
     
-    <i class="fa-brands fa-linkedin"></i>
-    <span>LinkedIn</span>
-  </a>
+      <i class="fa-brands fa-linkedin"></i>
+      <span>LinkedIn</span>
+    </a>
+  </div>
 
   <!-- Artstation button -->
   <!-- <a href="https://www.artstation.com/shoncg"
