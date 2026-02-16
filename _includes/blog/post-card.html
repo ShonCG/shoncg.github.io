@@ -8,14 +8,15 @@
   {%- assign card_style = post.color | prepend: 'bg-' -%}
   {%- if post.color != 'light' -%}
     {%- assign text_style  = 'text-white' -%}
-    {%- assign badge_style = 'badge-light text-' -%}
-    {%- assign badge_style = badge_style | append: post.color -%}
+    {%- assign badge_style = 'badge-light text-' | append: post.color -%}
   {%- endif -%}
-{%- else -%}
+{%- elsif post.style == 'border' -%}
   {%- assign card_style = post.color | prepend: 'border border-' -%}
   {%- if post.color -%}
     {%- assign badge_style =  post.color | prepend: 'badge-' -%}
   {%- endif -%}
+{%- else -%}
+  {%- assign card_style = '' -%} {# neutral: no border, no fill #}
 {%- endif -%}
 
 {%- comment -%} Determine Post URL {%- endcomment -%}
@@ -26,10 +27,11 @@
 {%- endif -%}
 
 <div class="col-lg-6 my-3 wow animated fadeIn" data-wow-delay=".15s">
-  <a href="{{ post_url }}" class="post card {{ card_style }}" 
+  <a href="{{ post_url }}" class="post card {{ card_style }}"
      {%- if post.external_url and site.open_new_tab -%} target="_blank" {%- endif -%}
      style="
        display: block;
+       overflow: hidden;
        transition: transform 0.3s ease, box-shadow 0.3s ease;
      "
      onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 12px 24px rgba(0,0,0,0.15)';"
@@ -37,7 +39,12 @@
   >
 
     {% if post.image %}
-      <img class="post-featured" src="{{ post.image | relative_url }}" alt="{{ post.title }}">
+      <div style="overflow: hidden;">
+        <img class="post-featured" src="{{ post.image | relative_url }}" alt="{{ post.title }}" 
+             style="width: 100%; display: block; transition: transform 0.3s ease;"
+             onmouseover="this.style.transform='scale(1.05)';"
+             onmouseout="this.style.transform='scale(1)';">
+      </div>
     {% endif %}
 
     <div class="card-body {{ text_style }}">
