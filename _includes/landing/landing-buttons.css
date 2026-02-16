@@ -14,16 +14,17 @@
   border: 1px solid currentColor;
   border-radius: 0.5rem;
   font-weight: 500;
-  transition:
-    background-color 0.2s ease,
-    color 0.2s ease,
+  background: transparent;
+  transition: 
     transform 0.15s ease,
+    border-color 0.2s ease,
+    color 0.2s ease,
     box-shadow 0.15s ease;
 }
 
 .landing-btn:hover {
-  background-color: var(--primary);
-  color: #fff;
+  color: var(--primary);
+  border-color: var(--primary);
   transform: translateY(-3px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.1);
 }
