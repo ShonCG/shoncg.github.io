@@ -16,7 +16,18 @@
 - title: Technical Artist, Whitesock
   from: 2021
   to: 2023
-  description: B2B, low end hardware
+  description: <p>My professional journey began here. I worked primarily with <b>Unity</b> and was responsible for overseeing the entire graphics production pipeline across multiple projects, sometimes managing several concurrently.</p>
+               <p>I worked on multiplatform projects targeting performance constrained environments such as <b>mobile devices</b> and <b>VR</b> (<b>Meta Quest 2</b>). Balancing visual quality with design requirements and strict performance limitations was a constant and central challenge.</p>
+               <p>The projects were mostly developed in a B2B context and I collaborated closely with game designers in a highly iterative workflow that required flexibility, while maintaining performance targets across platforms.</p>
+               <p style="margin-bottom: 4px;">My responsibilities included:</p>
+                <ul>
+                  <li>Developing complex, performance driven shaders.</li>
+                  <li>Creating optimized rigs for realtime environments.</li>
+                  <li>Setting up scenes in Unity optimized for performance and visual quality.</li>
+                  <li>Producing 3D assets, from modeling to texturing.</li>
+                  <li>Coordinating with other artists on more complex productions.</li>
+                </ul>
+               <p>During this time, I worked at Leo’s World (Il Mondo di Leo).</p>
 
 - title: Teacher - 3D Game Art, The Sign
   from: 2021
