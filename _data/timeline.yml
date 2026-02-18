@@ -3,7 +3,7 @@
   to: Present
   description: <p>This is where I'm currently working! My main software nowadays is <b>Unreal Engine</b>, and I'm in the porting team.</p>
                <p>The titles I've come across are some of the most technically demanding yet, and the platform I primarily target is <b>Nintendo Switch</b> (more recently <b>Nintendo Switch 2</b>). Sometimes I also handle multiplatform releases for <b>PS5</b> and <b>Xbox</b> as well.</p>
-               <p style="margin-bottom: 4px;">My responsibilities involve:</p>
+               <p">My responsibilities involve:</p>
                 <ul>
                   <li>Graphics optimization with a strong focus on visual fidelity.</li>
                   <li>Memory management and CPU performance optimization.</li>
@@ -18,21 +18,33 @@
   to: 2023
   description: <p>My professional journey began here. I worked primarily with <b>Unity</b> and was responsible for overseeing the entire graphics production pipeline across multiple projects, sometimes managing several concurrently.</p>
                <p>I worked on multiplatform projects targeting performance constrained environments such as <b>mobile devices</b> and <b>VR</b> (<b>Meta Quest 2</b>). Balancing visual quality with design requirements and strict performance limitations was a constant and central challenge.</p>
-               <p>The projects were mostly developed in a B2B context and I collaborated closely with game designers in a highly iterative workflow that required flexibility, while maintaining performance targets across platforms.</p>
-               <p style="margin-bottom: 4px;">My responsibilities included:</p>
+               <p>The projects were mostly developed in a B2B context and I collaborated closely with game designers in a highly iterative <b>workflow that required flexibility</b>, while maintaining performance targets across platforms.</p>
+               <p>My responsibilities included:</p>
                 <ul>
-                  <li>Developing complex, performance driven shaders.</li>
-                  <li>Creating optimized rigs for realtime environments.</li>
-                  <li>Setting up scenes in Unity optimized for performance and visual quality.</li>
-                  <li>Producing 3D assets, from modeling to texturing.</li>
-                  <li>Coordinating with other artists on more complex productions.</li>
+                  <li>Developing complex, performance driven <b>shaders</b>.</li>
+                  <li>Creating optimized <b>rigs</b> for realtime environments.</li>
+                  <li>Setting up scenes in <b>Unity</b> optimized for performance and visual quality.</li>
+                  <li>Producing <b>3D assets</b>, from modeling to texturing.</li>
+                  <li><b>Coordinating</b> with other artists on more complex productions.</li>
                 </ul>
-               <p>During this time, I worked at Leo’s World (Il Mondo di Leo).</p>
+               <p>During this time, among the projects I've worked on, there's <b>Leo's World</b> (Il Mondo di Leo).</p>
 
 - title: Teacher - 3D Game Art, The Sign
   from: 2021
   to: 2023
-  description: 3D generalist
+  description: <p>Here I supported the lead instructor throughout the teaching activities for the first and second year of the 3D Game Art course. Occasionally, I delivered lectures myself.</p>
+               <p>Later on, I was responsible for teaching and supervising the first and second year of the 3D Game Art course and, occasionally, the third year, as well as contributing to Teamwork classes. The latter involved coordinating, together with other instructors, the development teams composed of students from all courses within the Game department.</p>
+               <p>These are the modules I covered:</p>
+                <ul>
+                  <li><b>Shader</b> - Introduction to Shader Graph with a logical/mathematical approach.</li>
+                  <li><b>Unity Diorama</b> – From the fundamentals of the engine to the production of a small scale environment, balancing technical requirements (optimization, atlases, geometry) with the more artistic ones (composition, lighting, post-processing).</li>
+                  <li><b>Character Retopology</b> – Techniques and workflows for optimizing character topology for realtime applications.</li>
+                  <li><b>Mood & Feel</b> – Communicating emotions and gameplay feedback through color, lighting, and VFXs.</li>
+                  <li><b>Reel</b> – The finalization of students’ projects through the creation of a video highlighting their strengths.</li>
+                </ul>
+               
+               <p>Through teaching, I realized that you don’t truly understand something until you are required to explain it. Translating complex concepts into clear, intuitive explanations for students with little to no prior knowledge demanded structure, clarity, and strong communication.</p>
+               <p>To support this process, I consistently prepared example scenes and dedicated slide presentations to make each topic as accessible as possible. This experience not only deepened my technical understanding, but also helped me grow significantly in working with and guiding people.</p>
 
 - title: Student - 3D Game Art, The Sign
   from: 2019
