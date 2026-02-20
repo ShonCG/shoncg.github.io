@@ -1,15 +1,15 @@
-- name: Unreal Engine
-  percentage: 90
+- name: Profiling & Optimization
+  percentage: 95
   color: danger
 
-- name: Unity
+- name: Shaders & Materials
   percentage: 80
   color: primary
 
-- name: Maya
-  percentage: 70
+- name: Tools
+  percentage: 50
   color: info
 
-- name: Blender
-  percentage: 60
+- name: Procedural Content
+  percentage: 30
   color: success
