@@ -14,8 +14,8 @@ I’m a technical artist specialized in low-end hardware such as <b>consoles</b>
 My drive to understand how things work has never left me, and I bring it into every project. What I don’t know doesn’t intimidate me, it motivates me. Learning, experimenting, and solving new problems is what keeps this work exciting.
 
 <div class="row">
-{% include about/skills.html title="Main Skills" source=site.data.programming-skills %}
-{% include about/skills.html title="Other Skills" source=site.data.other-skills %}
+{% include about/skills.html title="Skills" source=site.data.programming-skills %}
+{% include about/skills.html title="Programs" source=site.data.other-skills %}
 </div>
 
 <div class="row">
