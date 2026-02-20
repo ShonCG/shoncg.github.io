@@ -5,6 +5,5 @@ tags: [Unity] [Mobile] [Performance]
 style: 
 color: primary
 description: Coming Soon!
-external_url: 
 ---
 
