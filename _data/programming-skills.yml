@@ -6,10 +6,14 @@
   percentage: 80
   color: primary
 
+- name: Rigging
+  percentage: 70
+  color: info
+
 - name: Tools
   percentage: 50
-  color: info
+  color: success
 
 - name: Procedural Content
   percentage: 30
-  color: success
+  color: warning
