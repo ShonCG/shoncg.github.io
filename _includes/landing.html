@@ -21,32 +21,6 @@
     opacity: 0.8;
   }
 
-  .nav-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-top: 2rem;
-  }
-
-  .hero-btn {
-    width: 160px;
-    padding: 0.6rem 1rem;
-    text-align: center;
-    text-decoration: none;
-    color: inherit;
-    border: 1px solid currentColor;
-    border-radius: 0.5rem;
-    font-weight: 500;
-    transition: transform 0.15s ease, color 0.2s ease, border-color 0.2s ease;
-  }
-
-  .hero-btn:hover {
-    color: var(--primary);
-    border-color: var(--primary);
-    transform: translateY(-2px);
-    text-decoration: none;
-  }
-
   .fade-in {
     opacity: 0;
     transition: opacity 1s ease;
@@ -59,15 +33,6 @@
     .stats {
       gap: 1.5rem;
       flex-wrap: wrap;
-    }
-
-    .nav-buttons {
-      flex-wrap: wrap;
-      gap: 0.8rem;
-    }
-
-    .hero-btn {
-      width: 140px;
     }
   }
 </style>
@@ -109,6 +74,7 @@
       </div>
     </div>
   </div>
+
     <!-- Navigation Cards -->
     <div class="row justify-content-center mt-4 fade-in" style="transition-delay: 1.5s;">
 
@@ -125,42 +91,39 @@
           <h5 class="card-title mb-2">Projects</h5>
           <p class="card-text text-muted mb-0">Published projects I've worked on</p>
         </div>
-
       </div>
 
-      <div class="col-md-4 my-3">
-        <div class="card shadow-sm border-0 h-100 text-center">
+      <div class="card shadow-sm border-0 h-100 landing-card"
+          style="transition: transform 0.3s ease, box-shadow 0.3s ease;"
+          onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 12px 24px rgba(0,0,0,0.15)';"
+          onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 10px rgba(0,0,0,0.08)';">
 
-          <img src="/images/blog/il-mondo-di-leo/il-mondo-di-leo-cover.jpg"
-           class="card-img-top"
-           alt="Projects">
-        
-          <div class="card-body">
-            <h5 class="card-title">Blog</h5>
-            <p class="card-text">Breakdowns of published and personal projects</p>
-            <a href="/blog/" class="btn btn-secondary">Read</a>
-          </div>
+        <img src="/images/projects/high-on-life.jpg"
+            class="card-img-top"
+            alt="Projects">
+
+        <div class="card-body text-left">
+          <h5 class="card-title mb-2">Blog</h5>
+          <p class="card-text text-muted mb-0">Breakdowns of published and personal projects</p>
         </div>
       </div>
+      
+      <div class="card shadow-sm border-0 h-100 landing-card"
+          style="transition: transform 0.3s ease, box-shadow 0.3s ease;"
+          onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 12px 24px rgba(0,0,0,0.15)';"
+          onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 10px rgba(0,0,0,0.08)';">
 
-      <div class="col-md-4 my-3">
-        <div class="card shadow-sm border-0 h-100 text-center">
-          
-          <img src="/images/landing/pro-pic.jpg"
-           class="card-img-top"
-           alt="Projects">
-        
-          <div class="card-body">
-            <h5 class="card-title">About</h5>
-            <p class="card-text">Something more about myself</p>
-            <a href="/about/" class="btn btn-warning">View</a>
-          </div>
+        <img src="/images/projects/high-on-life.jpg"
+            class="card-img-top"
+            alt="Projects">
+
+        <div class="card-body text-left">
+          <h5 class="card-title mb-2">About</h5>
+          <p class="card-text text-muted mb-0">Something more about me</p>
         </div>
       </div>
 
     </div>
-
-  
+    
 </div>
-
 </body>
