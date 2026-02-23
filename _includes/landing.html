@@ -39,12 +39,7 @@
 
 
 
-<div style="
-  position:relative;
-  width:100%;
-  height:70vh;
-  overflow:hidden;
-">
+<div style="position:relative; width:100%; height:70vh; overflow:hidden;">
 
   <!-- Background Video -->
   <video autoplay muted loop playsinline
@@ -60,17 +55,7 @@
     <source src="/images/landing/reel.mp4" type="video/mp4">
   </video>
 
-  <!-- Dark Transparent Overlay -->
-  <div style="
-    position:absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    background:rgba(0,0,0,0.55);
-  "></div>
-
-  <!-- Bottom-Left Text -->
+  <!-- Bottom-Left Text Container -->
   <div style="
     position:absolute;
     bottom:2rem;
@@ -78,20 +63,27 @@
     z-index:2;
     color:white;
     max-width:600px;
+    display:flex;
+    flex-direction:column;
+    gap:0.5rem;
   ">
-    <h1 style="
-      font-size:3rem;
-      font-weight:800;
-      margin:0 0 0.5rem 0;
-    ">ShonCG</h1>
 
-    <p style="
-      font-size:1.2rem;
-      opacity:0.9;
-      margin:0;
-    ">
+    <!-- Dark Overlay Behind Text -->
+    <div style="
+      position:absolute;
+      top:0; left:0;
+      width:100%; height:100%;
+      background:rgba(0,0,0,0.55);
+      border-radius:0.5rem;
+      z-index:-1;
+    "></div>
+
+    <!-- Text -->
+    <h1 style="font-size:3rem; font-weight:800; margin:0;">ShonCG</h1>
+    <p style="font-size:1.2rem; margin:0; opacity:0.9;">
       Graphics Engineer • Performance Optimization • Shipped Titles
     </p>
+
   </div>
 
 </div>
