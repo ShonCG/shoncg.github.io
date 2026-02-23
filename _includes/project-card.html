@@ -1,9 +1,11 @@
+{%- assign badge_style = 'badge-dark' -%}
+
 <div class="col-lg-4 col-md-6 my-3">
   <a href="{{ project.url | relative_url }}"
      style="
        display:block;
        text-decoration:none;
-       border-radius:1rem;             /* fixed radius for all cards */
+       border-radius:0.75rem;             /* fixed radius for all cards */
        overflow:hidden;
        background-color:#242526;       /* fixed dark grey */
        box-shadow:0 4px 10px rgba(0,0,0,0.08);
@@ -28,16 +30,7 @@
       
       <p style="margin:0 0 0.5rem 0;">
         {% for tag in project.tags %}
-          <span style="
-            display:inline-block;
-            padding:0.2rem 0.5rem;
-            font-size:0.8rem;
-            font-weight:500;
-            border-radius:0.25rem;
-            background-color:white;   /* fixed badge background */
-            color:#242526;            /* fixed badge text */
-            margin-right:0.25rem;
-          ">{{ tag }}</span>
+          <span class="badge {{ badge_style }}">{{ tag }}</span>
         {% endfor %}
       </p>
 
