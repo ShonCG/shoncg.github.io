@@ -1,11 +1,12 @@
-.project-badge {
-  display: inline-block;
+/* Force project tags to match blog tags */
+.projects .badge, 
+.projects .badge * {
+  background-color: #333 !important;  /* exact blog tag background */
+  color: #fff !important;            /* exact blog tag text */
   font-weight: 500;
-  padding: 0.35em 0.65em;
-  font-size: 0.75em;
   border-radius: 0.25rem;
-  background-color: #333;
-  color: #fff;
+  padding: 0.35em 0.65em;
   text-decoration: none;
+  display: inline-block;
   margin-right: 0.3rem;
 }
