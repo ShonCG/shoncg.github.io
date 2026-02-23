@@ -109,7 +109,7 @@ window.addEventListener('resize', resizeText);
 <!-- Propic, bio and stats -->
 <div id="profile-row" style="
     display:flex;
-    align-items:center;       /* vertical centering */
+    align-items:center;
     gap:2rem;
     flex-wrap:nowrap;
     padding:2rem;
@@ -167,29 +167,25 @@ function scaleProfileText() {
 
     const imgHeight = img.clientHeight;
 
-    // Base scaling unit
-    let base = imgHeight * 0.14;   // slightly larger base for bigger stats
-    base = Math.min(base, 30);     // clamp max size
+    let base = imgHeight * 0.15;
+    base = Math.min(base, 30);
 
-    // Stats dominate
     const statNumbers = stats.querySelectorAll('.stat-number');
     const statLabels = stats.querySelectorAll('.stat-label');
 
     const statsNumberSize = base;
-    const statsLabelSize  = base * 0.45;
-    const bioSize         = base * 0.7;   // bio clearly smaller
+    const statsLabelSize  = base * 0.5;
+    const bioSize         = base * 0.6;
 
     statNumbers.forEach(el => el.style.fontSize = statsNumberSize + 'px');
     statLabels.forEach(el => el.style.fontSize = statsLabelSize + 'px');
 
     bio.style.fontSize = bioSize + 'px';
-    bio.style.lineHeight = '1.3';
+    bio.style.lineHeight = '1.2';
 
-    // 🔥 Reduced proportional gap
-    stats.style.gap = Math.max(imgHeight * 0.025, 10) + 'px';
+    stats.style.gap = Math.max(imgHeight * 0.02, 10) + 'px';
 }
 
-// Initial
 scaleProfileText();
 window.addEventListener('resize', scaleProfileText);
 </script>
