@@ -12,11 +12,11 @@
 
   <!--portfolYOU Jekyll theme by yousinix Free for personal and commercial use under the MIT license https://github.com/yousinix/portfolYOU-->
   {% include head.html %}
-  
-  <!-- Optional global scaling: increases font and spacing -->
+
+  <!-- Global scaling -->
   <style>
     html {
-      font-size: 18px; /* default 16px → everything slightly bigger */
+      font-size: 18px; /* slightly larger text site-wide */
     }
   </style>
 </head>
@@ -25,9 +25,9 @@
 
   {% include navbar.html %}
 
-  <!-- full-width container -->
-  <main class="flex-shrink-0 container-fluid px-0 mt-5">
-    <div style="transform:scale(1.1); transform-origin:top center;">
+  <!-- main container slightly wider than default -->
+  <main class="flex-shrink-0 container-fluid px-0 mt-5" style="max-width:1400px; margin:0 auto;">
+    <div style="transform:scale(1.05); transform-origin:top center;">
       {{ content }}
     </div>
   </main>
