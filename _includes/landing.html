@@ -90,32 +90,56 @@
 
 <div class="row justify-content-center align-items-center p-4">
 
-  <!-- Description and Stats combined -->
-  <div class="col-lg-8 col-md-10">
-
+  <div class="col-lg-10">
     <div class="row align-items-center">
 
-      <!-- Description -->
-      <div class="col-md-6 text-left wow animated slideInUp" data-wow-delay=".15s">
-        <p class="text-muted" style="font-size:1.25rem;">
-          {{ site.description }}
-        </p>
+      <!-- Image LEFT -->
+      <div class="col-md-5 text-center mb-4 mb-md-0">
+        <img src="{{ site.author.image }}"
+             alt="{{ site.title }}"
+             class="wow animated zoomIn"
+             data-wow-delay=".1s"
+             style="
+               width:100%;
+               max-width:350px;
+               border-radius: 1rem;
+               object-fit: cover;
+             ">
       </div>
 
-      <!-- Stats -->
-      <div class="col-md-6 stats fade-in" style="transition-delay: 0.75s;">
-        <div class="d-flex justify-content-around text-center">
-          <div>
-            <div class="stat-number">4+</div>
-            <div class="stat-label">Years of Work</div>
-          </div>
-          <div>
-            <div class="stat-number">9+</div>
-            <div class="stat-label">Years in Game Dev</div>
-          </div>
-          <div>
-            <div class="stat-number">4</div>
-            <div class="stat-label">Shipped Titles</div>
+      <!-- Bio + Stats RIGHT -->
+      <div class="col-md-7">
+
+        <!-- Bio -->
+        <p class="wow animated slideInUp"
+           data-wow-delay=".15s"
+           style="
+             color: white;
+             font-size: 1.25rem;
+             margin-bottom: 2rem;
+           ">
+          {{ site.description }}
+        </p>
+
+        <!-- Stats -->
+        <div class="stats fade-in" style="transition-delay: 0.75s;">
+          <div class="d-flex justify-content-between text-center">
+
+            <div>
+              <div class="stat-number">4+</div>
+              <div class="stat-label">Years of Work</div>
+            </div>
+
+            <div>
+              <div class="stat-number">9+</div>
+              <div class="stat-label">Years in Game Dev</div>
+            </div>
+
+            <div>
+              <div class="stat-number">4</div>
+              <div class="stat-label">Shipped Titles</div>
+            </div>
+            
           </div>
         </div>
       </div>
