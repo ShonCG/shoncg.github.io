@@ -1,4 +1,4 @@
-{%- assign badge_style = 'badge-dark' -%}
+{%- assign badge_style = 'badge-light text-primary' -%}
 
 <div class="col-lg-4 col-md-6 my-3">
   <a href="{{ project.url | relative_url }}"
@@ -30,7 +30,7 @@
       
       <p style="margin:0 0 0.5rem 0;">
         {% for tag in project.tags %}
-          <span class="badge badge-dark" style="background-color:#343a40; color:white;">{{ tag }}</span>
+          <span class="badge {{ badge_style }}">{{ tag }}</span>
         {% endfor %}
       </p>
 
