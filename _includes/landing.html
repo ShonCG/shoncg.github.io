@@ -103,14 +103,13 @@ resizeText();
 // Update on window resize
 window.addEventListener('resize', resizeText);
 </script>
-
 </div>
 
 
 
 <div id="profile-row" style="
     display:flex;
-    align-items:center;         /* vertically center text to image */
+    align-items:center;
     gap:2rem;
     flex-wrap:nowrap;
     padding:2rem;
@@ -134,7 +133,7 @@ window.addEventListener('resize', resizeText);
       min-width:0;
       display:flex;
       flex-direction:column;
-      justify-content:center;    /* center text vertically to image */
+      justify-content:center;
       gap:0.5rem;
   ">
     <!-- Bio -->
@@ -165,22 +164,25 @@ window.addEventListener('resize', resizeText);
 <script>
 function scaleTextToImage() {
     const img = document.getElementById('profile-image').querySelector('img');
-    const text = document.getElementById('profile-text');
     const bio = document.getElementById('bio');
     const stats = document.getElementById('stats');
 
     const imgHeight = img.clientHeight;
 
-    // Split height proportionally: 50% for bio, 50% for stats
-    bio.style.fontSize = (imgHeight * 0.15) + 'px';   // 15% of image height
-    stats.style.fontSize = (imgHeight * 0.12) + 'px'; // 12% of image height
+    // Compute bio font size as fraction of image height
+    let bioFontSize = imgHeight * 0.15; // 15% of image height
+    bioFontSize = Math.min(bioFontSize, 28); // clamp max size to 28px
 
-    // Optional: adjust line heights to fit perfectly
+    // Apply to bio
+    bio.style.fontSize = bioFontSize + 'px';
     bio.style.lineHeight = '1.2';
+
+    // Stats scale proportionally to bio
+    stats.style.fontSize = (bioFontSize * 0.8) + 'px';
     stats.style.lineHeight = '1.2';
 }
 
-// Initial scale
+// Initial call
 scaleTextToImage();
 
 // Rescale on window resize
