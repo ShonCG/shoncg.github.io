@@ -167,33 +167,30 @@ function scaleProfileText() {
 
     const imgHeight = img.clientHeight;
 
-    // Base unit derived from image height
-    let base = imgHeight * 0.12;
-    base = Math.min(base, 26); // clamp so it doesn't explode on wide screens
+    // Base scaling unit
+    let base = imgHeight * 0.14;   // slightly larger base for bigger stats
+    base = Math.min(base, 30);     // clamp max size
 
-    // ---- STATS DOMINANT ----
+    // Stats dominate
     const statNumbers = stats.querySelectorAll('.stat-number');
     const statLabels = stats.querySelectorAll('.stat-label');
 
-    const statsNumberSize = base;           // largest
-    const statsLabelSize  = base * 0.45;    // smaller labels
-    const bioSize         = base * 0.75;    // bio smaller than numbers
+    const statsNumberSize = base;
+    const statsLabelSize  = base * 0.45;
+    const bioSize         = base * 0.7;   // bio clearly smaller
 
     statNumbers.forEach(el => el.style.fontSize = statsNumberSize + 'px');
     statLabels.forEach(el => el.style.fontSize = statsLabelSize + 'px');
 
-    // ---- BIO SECONDARY ----
     bio.style.fontSize = bioSize + 'px';
     bio.style.lineHeight = '1.3';
 
-    // ---- SCALE GAP PROPORTIONALLY ----
-    stats.style.gap = (imgHeight * 0.05) + 'px';
+    // 🔥 Reduced proportional gap
+    stats.style.gap = Math.max(imgHeight * 0.025, 10) + 'px';
 }
 
 // Initial
 scaleProfileText();
-
-// Resize listener
 window.addEventListener('resize', scaleProfileText);
 </script>
 
