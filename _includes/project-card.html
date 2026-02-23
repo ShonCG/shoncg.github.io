@@ -1,4 +1,4 @@
-{%- assign badge_style = 'badge-light text-primary' -%}
+{%- assign badge_style = 'badge-light text-' | append: post.color -%}
 
 <div class="col-lg-4 col-md-6 my-3">
   <a href="{{ project.url | relative_url }}"
