@@ -1,14 +1,37 @@
-<a href="{{ include.url }}" style="text-decoration:none; color:white; display:block;">
+<a href="{{ include.url }}" style="
+    text-decoration:none;
+    color:white;
+    display:block;
+    border-radius:0.75rem;      /* round all corners */
+    overflow:hidden;             /* clip children to corners */
+">
   <div class="card shadow-sm border-0 h-100 landing-card"
-       style="border-radius: 0.75rem; transition: transform 0.3s ease, box-shadow 0.3s ease;"
+       style="
+         border-radius:inherit;  /* inherit rounding */
+         transition: transform 0.3s ease, box-shadow 0.3s ease;
+         overflow:hidden;
+       "
        onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 12px 24px rgba(0,0,0,0.15)';"
        onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 10px rgba(0,0,0,0.08)';">
 
-    <img src="{{ include.image }}" class="card-img-top" alt="{{ include.title }}">
+    <img src="{{ include.image }}" alt="{{ include.title }}"
+         style="
+           width:100%;
+           display:block;
+           height:200px;
+           object-fit:cover;
+           border-radius:inherit;  /* ensures top corners are rounded */
+         ">
 
-    <div class="card-body text-left">
-      <h5 class="card-title mb-2" style="color:white;">{{ include.title }}</h5>
-      <p class="card-text mb-0" style="color:white;">{{ include.description }}</p>
+    <div style="
+           padding:1rem;
+           display:flex;
+           flex-direction:column;
+           justify-content:flex-start;
+           gap:0.5rem;
+         ">
+      <h5 style="margin:0; color:white;">{{ include.title }}</h5>
+      <p style="margin:0; color:white; opacity:0.9;">{{ include.description }}</p>
     </div>
 
   </div>
