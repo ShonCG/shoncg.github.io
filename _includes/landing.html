@@ -167,31 +167,33 @@ function scaleProfileText() {
 
     const imgHeight = img.clientHeight;
 
-    // Bio font size: smaller fraction to reduce dominance
-    let bioFontSize = imgHeight * 0.12; // 12% of image height
-    bioFontSize = Math.min(bioFontSize, 24); // clamp max
-    bio.style.fontSize = bioFontSize + 'px';
-    bio.style.lineHeight = '1.2';
+    // Base unit derived from image height
+    let base = imgHeight * 0.12;
+    base = Math.min(base, 26); // clamp so it doesn't explode on wide screens
 
-    // Stats font sizes
+    // ---- STATS DOMINANT ----
     const statNumbers = stats.querySelectorAll('.stat-number');
     const statLabels = stats.querySelectorAll('.stat-label');
 
-    const statsNumberSize = bioFontSize * 0.85; // smaller than bio
-    const statsLabelSize = bioFontSize * 0.45;
+    const statsNumberSize = base;           // largest
+    const statsLabelSize  = base * 0.45;    // smaller labels
+    const bioSize         = base * 0.75;    // bio smaller than numbers
 
     statNumbers.forEach(el => el.style.fontSize = statsNumberSize + 'px');
     statLabels.forEach(el => el.style.fontSize = statsLabelSize + 'px');
 
-    // Scale gap between stats proportionally to image height
-    const gap = imgHeight * 0.05; // 5% of image height
-    stats.style.gap = gap + 'px';
+    // ---- BIO SECONDARY ----
+    bio.style.fontSize = bioSize + 'px';
+    bio.style.lineHeight = '1.3';
+
+    // ---- SCALE GAP PROPORTIONALLY ----
+    stats.style.gap = (imgHeight * 0.05) + 'px';
 }
 
-// Initial call
+// Initial
 scaleProfileText();
 
-// Update on resize
+// Resize listener
 window.addEventListener('resize', scaleProfileText);
 </script>
 
