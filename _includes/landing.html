@@ -108,10 +108,16 @@ window.addEventListener('resize', resizeText);
 
 
 
-<div class="d-flex align-items-start" style="gap:2rem; flex-wrap:nowrap; padding:2rem;">
-  
+<div id="profile-row" style="
+    display:flex;
+    align-items:center;         /* vertically center text to image */
+    gap:2rem;
+    flex-wrap:nowrap;
+    padding:2rem;
+">
+
   <!-- Image LEFT -->
-  <div style="flex: 0 1 35%; max-width: 350px;">
+  <div id="profile-image" style="flex:0 1 35%; max-width:350px;">
     <img src="{{ site.author.image }}"
          alt="{{ site.title }}"
          style="
@@ -123,15 +129,21 @@ window.addEventListener('resize', resizeText);
   </div>
 
   <!-- Bio + Stats RIGHT -->
-  <div style="flex: 1 1 0; min-width:0; display:flex; flex-direction:column; gap:1rem;">
-    
+  <div id="profile-text" style="
+      flex:1 1 0;
+      min-width:0;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;    /* center text vertically to image */
+      gap:0.5rem;
+  ">
     <!-- Bio -->
-    <p style="color:white; font-size:1.25rem; margin:0;">
+    <p id="bio" style="color:white; margin:0;">
       {{ site.description }}
     </p>
 
     <!-- Stats -->
-    <div style="display:flex; justify-content:space-between; gap:2rem;">
+    <div id="stats" style="display:flex; justify-content:space-between; gap:2rem;">
       <div class="text-center">
         <div class="stat-number">4+</div>
         <div class="stat-label">Years of Work</div>
@@ -148,8 +160,32 @@ window.addEventListener('resize', resizeText);
       </div>
     </div>
   </div>
-
 </div>
+
+<script>
+function scaleTextToImage() {
+    const img = document.getElementById('profile-image').querySelector('img');
+    const text = document.getElementById('profile-text');
+    const bio = document.getElementById('bio');
+    const stats = document.getElementById('stats');
+
+    const imgHeight = img.clientHeight;
+
+    // Split height proportionally: 50% for bio, 50% for stats
+    bio.style.fontSize = (imgHeight * 0.15) + 'px';   // 15% of image height
+    stats.style.fontSize = (imgHeight * 0.12) + 'px'; // 12% of image height
+
+    // Optional: adjust line heights to fit perfectly
+    bio.style.lineHeight = '1.2';
+    stats.style.lineHeight = '1.2';
+}
+
+// Initial scale
+scaleTextToImage();
+
+// Rescale on window resize
+window.addEventListener('resize', scaleTextToImage);
+</script>
 
 
 
