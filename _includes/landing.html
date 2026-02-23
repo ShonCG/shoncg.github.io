@@ -110,26 +110,24 @@ window.addEventListener('resize', resizeText);
 
 <div class="row justify-content-center align-items-center p-4" style="margin-top:3rem; margin-bottom:2rem;">
   <div class="col-lg-12">
-    <div class="row align-items-center flex-wrap">
+    <div class="d-flex align-items-center flex-wrap" style="gap:2rem;">
 
       <!-- Image LEFT -->
-      <div class="col-12 col-md-5 text-center mb-4 mb-md-0">
+      <div style="flex: 0 1 auto; max-width:350px;">
         <img src="{{ site.author.image }}"
              alt="{{ site.title }}"
              class="wow animated zoomIn"
              data-wow-delay=".1s"
              style="
-               width: 100%;
-               max-width: clamp(150px, 35%, 350px);  /* scales between 150px and 350px */
-               height: auto;
+               width:100%;
+               height:auto;
                border-radius: 1rem;
                object-fit: cover;
-               flex-shrink: 1;  /* allows shrinking on narrow screens */
              ">
       </div>
 
       <!-- Bio + Stats RIGHT -->
-      <div class="col-12 col-md-6 d-flex flex-column">
+      <div class="flex-grow-1 d-flex flex-column">
 
         <!-- Bio -->
         <p class="wow animated slideInUp"
@@ -158,8 +156,8 @@ window.addEventListener('resize', resizeText);
             <div class="stat-number">4</div>
             <div class="stat-label">Shipped Titles</div>
           </div>
-          
         </div>
+        
       </div>
     </div>
   </div>
