@@ -38,7 +38,7 @@
 </style>
 
 
-
+<!-- Video -->
 <div style="
   position:relative;
   width:100%;
@@ -52,7 +52,7 @@
   padding-bottom:56.25%;     /* 9/16 = 0.5625 */
 ">
 
-  <!-- Video -->
+  <!-- Actual video -->
   <video autoplay muted loop playsinline
          style="
            position:absolute;
@@ -106,7 +106,7 @@ window.addEventListener('resize', resizeText);
 </div>
 
 
-
+<!-- Propic, bio and stats -->
 <div id="profile-row" style="
     display:flex;
     align-items:center;       /* vertical centering */
@@ -142,7 +142,7 @@ window.addEventListener('resize', resizeText);
     </p>
 
     <!-- Stats -->
-    <div id="stats" class="stats" style="display:flex; justify-content:space-between; gap:2rem;">
+    <div id="stats" class="stats" style="display:flex; justify-content:space-between;">
       <div class="text-center">
         <div class="stat-number">4+</div>
         <div class="stat-label">Years of Work</div>
@@ -167,24 +167,31 @@ function scaleProfileText() {
 
     const imgHeight = img.clientHeight;
 
-    // Bio font size: 15% of image height, clamp max 28px
-    let bioFontSize = imgHeight * 0.15;
-    bioFontSize = Math.min(bioFontSize, 28);
+    // Bio font size: smaller fraction to reduce dominance
+    let bioFontSize = imgHeight * 0.12; // 12% of image height
+    bioFontSize = Math.min(bioFontSize, 24); // clamp max
     bio.style.fontSize = bioFontSize + 'px';
     bio.style.lineHeight = '1.2';
 
-    // Stats scale proportionally to bio
+    // Stats font sizes
     const statNumbers = stats.querySelectorAll('.stat-number');
     const statLabels = stats.querySelectorAll('.stat-label');
 
-    statNumbers.forEach(el => el.style.fontSize = (bioFontSize * 0.8) + 'px');
-    statLabels.forEach(el => el.style.fontSize = (bioFontSize * 0.35) + 'px');
+    const statsNumberSize = bioFontSize * 0.85; // smaller than bio
+    const statsLabelSize = bioFontSize * 0.45;
+
+    statNumbers.forEach(el => el.style.fontSize = statsNumberSize + 'px');
+    statLabels.forEach(el => el.style.fontSize = statsLabelSize + 'px');
+
+    // Scale gap between stats proportionally to image height
+    const gap = imgHeight * 0.05; // 5% of image height
+    stats.style.gap = gap + 'px';
 }
 
-// Initial scaling
+// Initial call
 scaleProfileText();
 
-// Rescale on window resize
+// Update on resize
 window.addEventListener('resize', scaleProfileText);
 </script>
 
