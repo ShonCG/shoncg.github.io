@@ -91,10 +91,10 @@
 <div class="row justify-content-center align-items-center p-4">
 
   <div class="col-lg-10">
-    <div class="row align-items-center">
+    <div class="row align-items-center flex-wrap">
 
       <!-- Image LEFT -->
-      <div class="col-md-5 text-center mb-4 mb-md-0">
+      <div class="col-12 col-md-5 text-center mb-4 mb-md-0">
         <img src="{{ site.author.image }}"
              alt="{{ site.title }}"
              class="wow animated zoomIn"
@@ -108,7 +108,7 @@
       </div>
 
       <!-- Bio + Stats RIGHT -->
-      <div class="col-md-7">
+      <div class="col-12 col-md-7 d-flex flex-column">
 
         <!-- Bio -->
         <p class="wow animated slideInUp"
@@ -122,29 +122,28 @@
         </p>
 
         <!-- Stats -->
-        <div class="stats fade-in" style="transition-delay: 0.75s;">
-          <div class="d-flex justify-content-between text-center">
+        <div class="stats fade-in d-flex justify-content-between" style="transition-delay: 0.75s; gap:2rem;">
+          <div class="text-center">
+            <div class="stat-number">4+</div>
+            <div class="stat-label">Years of Work</div>
+          </div>
 
-            <div>
-              <div class="stat-number">4+</div>
-              <div class="stat-label">Years of Work</div>
-            </div>
+          <div class="text-center">
+            <div class="stat-number">9+</div>
+            <div class="stat-label">Years in Game Dev</div>
+          </div>
 
-            <div>
-              <div class="stat-number">9+</div>
-              <div class="stat-label">Years in Game Dev</div>
-            </div>
-
-            <div>
-              <div class="stat-number">4</div>
-              <div class="stat-label">Shipped Titles</div>
-            </div>
-            
+          <div class="text-center">
+            <div class="stat-number">4</div>
+            <div class="stat-label">Shipped Titles</div>
           </div>
         </div>
+
       </div>
+
     </div>
   </div>
+
 </div>
 
 
