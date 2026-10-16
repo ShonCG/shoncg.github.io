@@ -1,0 +1,7 @@
+{%- assign ys_now_y = "now" | date: "%Y" | plus: 0 -%}
+{%- assign ys_now_md = "now" | date: "%m%d" | plus: 0 -%}
+{%- assign ys_start_y = include.date | date: "%Y" | plus: 0 -%}
+{%- assign ys_start_md = include.date | date: "%m%d" | plus: 0 -%}
+{%- assign ys_years = ys_now_y | minus: ys_start_y -%}
+{%- if ys_now_md < ys_start_md -%}{%- assign ys_years = ys_years | minus: 1 -%}{%- endif -%}
+{{- ys_years -}}

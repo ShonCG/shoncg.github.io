@@ -46,6 +46,12 @@ author:
 
 
 
+### Landing Stats ###
+stats:
+  work_start        : "2021-10-01"
+  gamedev_start     : "2017-11-01"
+
+
 ### Posts ###
 permalink: /blog/:title
 

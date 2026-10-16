@@ -144,15 +144,15 @@ window.addEventListener('resize', resizeText);
     <!-- Stats -->
     <div id="stats" class="stats" style="display:flex; justify-content:space-between;">
       <div class="text-center">
-        <div class="stat-number">4+</div>
+        <div class="stat-number">{% include years_since.html date=site.stats.work_start %}+</div>
         <div class="stat-label">Years of Work</div>
       </div>
       <div class="text-center">
-        <div class="stat-number">9+</div>
+        <div class="stat-number">{% include years_since.html date=site.stats.gamedev_start %}+</div>
         <div class="stat-label">Years in Game Dev</div>
       </div>
       <div class="text-center">
-        <div class="stat-number">4</div>
+        <div class="stat-number">{{ site.projects | size }}</div>
         <div class="stat-label">Shipped Titles</div>
       </div>
     </div>
